@@ -60,7 +60,15 @@ export class HeroesService{
 	console.log("servicio listo");
 }
 
-getHeroes(){
+getHeroes():Heroe[]{
     return this.heroes;
 }
+}
+
+export interface Heroe{
+  nombre: string;
+  bio: string;
+  img: string;
+  aparicion: string;
+  casa: string;
 }
