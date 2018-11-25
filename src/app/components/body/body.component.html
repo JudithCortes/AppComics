@@ -13,15 +13,15 @@
         </button>
     </div>
 
+
+
     <div class="col">
         <h1>*ngFor</h1>
         <hr>
         <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <li *ngFor="let personaje of personajes; let i = index" class="list-group-item">
+                   {{i+1}}-{{personaje}}
+                </li>
         </ul>
     </div>
 </div>
