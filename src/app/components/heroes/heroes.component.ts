@@ -8,13 +8,15 @@ import {HeroesService} from '../../servicios/heroes.service';
 })
 export class HeroesComponent implements OnInit {
 
+  heroes: any[] = [];
 
   constructor(private _heroesService:HeroesService ) { 
     console.log("constructor");
   }
 
   ngOnInit() {
-    console.log("ngOnInit");
+    this.heroes = this._heroesService.getHeroes();
+    console.log(this.heroes);
   }
 
 }
