@@ -68,7 +68,7 @@ getHeroe(idx:string){
   return this.heroes[idx];
 }
 
-buscarHeroes(termino:string){
+buscarHeroes(termino:string):Heroe[]{
   //crear un array
 let heroesArr: Heroe[] = [];
 //pasarlo a minusculas
@@ -80,7 +80,7 @@ for(let heroe of this.heroes){
   //si se encuentra el termino en el nombre la funcion
   //regresa un 0 o mayor si encuentra el nombre(posicion)
   //si no lo encuentra regresa -1
-  if(nombre.indexOf(termino =>0)){
+  if(nombre.indexOf(termino) >=0 ){
     //agregar ese heroe al arreglo
     heroesArr.push(heroe)
   }
@@ -88,6 +88,7 @@ for(let heroe of this.heroes){
 return heroesArr;
 console.log(heroesArr);
 }
+
 }
 
 export interface Heroe{
