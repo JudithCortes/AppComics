@@ -67,6 +67,27 @@ getHeroes():Heroe[]{
 getHeroe(idx:string){
   return this.heroes[idx];
 }
+
+buscarHeroes(termino:string){
+  //crear un array
+let heroesArr: Heroe[] = [];
+//pasarlo a minusculas
+termino = termino.toLocaleLowerCase();
+//hacer barrido 
+for(let heroe of this.heroes){
+  let nombre = heroe.nombre.toLocaleLowerCase();
+  //buscar un string dentro del nombre
+  //si se encuentra el termino en el nombre la funcion
+  //regresa un 0 o mayor si encuentra el nombre(posicion)
+  //si no lo encuentra regresa -1
+  if(nombre.indexOf(termino =>0)){
+    //agregar ese heroe al arreglo
+    heroesArr.push(heroe)
+  }
+}
+return heroesArr;
+console.log(heroesArr);
+}
 }
 
 export interface Heroe{
